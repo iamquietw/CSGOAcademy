@@ -8,8 +8,8 @@ import Home from './panels/Home';
 import Mechanics from "./panels/Mechanics";
 import Skins from "./panels/Skins";
 import Modes from "./panels/Modes";
-import Tests from "./panels/Tests";
-import FirstTest from "./panels/TestsPanels/FirstTest";
+import Info from "./panels/Info";
+import MM from "./panels/MM";
 
 const App = () => {
 	const [activePanel, setActivePanel] = useState('home');
@@ -36,8 +36,8 @@ const App = () => {
 			<Mechanics id='mechanics' go={go} />
 			<Skins id={'skins'} go={go} />
 			<Modes id={'modes'} go={go} />
-			<Tests id={"tests"} go={go}/>
-			<FirstTest id={"firstTest"} go={go}/>
+			<Info id={'info'} go={go} />
+			<MM id={"mm"} go={go}/>
 		</View>
 	);
 }

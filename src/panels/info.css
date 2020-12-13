@@ -1,0 +1,11 @@
+#title {
+    font-weight: bold;
+}
+#quote {
+    font-style: italic;
+}
+#image {
+    /*width: 100%;*/
+    /*max-width: 100%;*/
+    background-image: url("https://i.playground.ru/p/vxI_n5JCZgZ9Lz-bXy2rug.jpeg");
+}

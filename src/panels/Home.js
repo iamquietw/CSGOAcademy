@@ -30,14 +30,14 @@ const Home = ({ id, go }) => (
 								</div>
 							</div>
 						</Card>
-						<Card id={"card_info"} size="l" mode={"shadow"}>
+						<Card id={"card_info"} size="l" mode={"shadow"} onClick={go} data-to={"info"}>
 							<div id={"card_info_parent"} style={{ height: 96 }}>
 								<div id={"card_info_text"}>
 									История и другая информация об игре
 								</div>
 							</div>
 						</Card>
-						<Card id={"card_ranks"} size="l" mode={"shadow"}>
+						<Card id={"card_ranks"} size="l" mode={"shadow"} onClick={go} data-to={"mm"}>
 							<div id={"card_ranks_parent"} style={{ height: 96 }}>
 								<div id={"card_ranks_text"}>
 									Всё о званиях и соревновательном режиме
