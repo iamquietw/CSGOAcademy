@@ -1,0 +1,22 @@
+#card_title {
+    background-image: url("https://games.mail.ru/hotbox/content_files/news/2017/9/8a3e0b1.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#card_sub_text {
+    font-family: "TT Commons", -apple-system, Roboto, Helvetica Neue, Arial, monospace;
+}
+#card_sub_title {
+    font-family: "TT Commons Bold", -apple-system, Roboto, Helvetica Neue, Arial, monospace;
+    font-size: small;
+    color: dimgray;
+}
+
+#mode_title {
+    font-family: "TT Commons DemiBold", -apple-system, Roboto, Helvetica Neue, Arial, monospace;
+}
+
+#mode_text {
+    font-family: "TT Commons", -apple-system, Roboto, Helvetica Neue, Arial, monospace;
+}
