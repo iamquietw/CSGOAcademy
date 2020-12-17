@@ -51,21 +51,21 @@ const Home = ({ id, go }) => (
 								</div>
 							</div>
 						</Card>
-						<Card id={"card_test"} size="s" mode={"shadow"} onClick={go} data-to={"tests"}>
+						<Card id={"card_test"} size="s" mode={"shadow"} onClick={go} data-to={"selectTest"}>
 							<div id={"card_test_parent"} style={{ height: 96 }}>
 								<div id={"card_test_text"}>
 									Тесты
 								</div>
 							</div>
 						</Card>
-						<Card id={"card_tactic"} size="s" mode={"shadow"}>
+						<Card id={"card_tactic"} size="s" mode={"shadow"} onClick={go} data-to={"tactics"}>
 							<div id={"card_tactic_parent"} style={{ height: 96 }}>
 								<div id={"card_tactic_text"}>
 									Тактики
 								</div>
 							</div>
 						</Card>
-						<Card id={"card_stat"} size={"l"} mode={"shadow"}>
+						<Card id={"card_stat"} size={"l"} mode={"shadow"} onClick={go} data-to={"apitest"}>
 							<div id={"card_stat_parent"} style={{ height: 96 }}>
 								<div id={"card_stat_text"}>
 									Статистика игрока

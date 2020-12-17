@@ -10,6 +10,10 @@ import Skins from "./panels/Skins";
 import Modes from "./panels/Modes";
 import Info from "./panels/Info";
 import MM from "./panels/MM";
+import Tactics from "./panels/Tactics";
+import Test from "./panels/Test";
+import SelectTest from "./panels/SelectTest";
+import APITest from "./panels/APITest";
 
 const App = () => {
 	const [activePanel, setActivePanel] = useState('home');
@@ -38,6 +42,10 @@ const App = () => {
 			<Modes id={'modes'} go={go} />
 			<Info id={'info'} go={go} />
 			<MM id={"mm"} go={go}/>
+			<Tactics id={"tactics"} go={go}/>
+			<Test id={"test"} go={go}/>
+			<SelectTest id={"selectTest"} go={go}/>
+			<APITest id={"apitest"} go={go}/>
 		</View>
 	);
 }

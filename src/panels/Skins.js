@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {platform, IOS, Card, Group, CardScroll} from '@vkontakte/vkui';
+import {platform, IOS, Card, Group, CardScroll, CardGrid} from '@vkontakte/vkui';
 import Panel from '@vkontakte/vkui/dist/components/Panel/Panel';
 import PanelHeader from '@vkontakte/vkui/dist/components/PanelHeader/PanelHeader';
 import PanelHeaderButton from '@vkontakte/vkui/dist/components/PanelHeaderButton/PanelHeaderButton';
@@ -58,6 +58,18 @@ const Skins = props => (
                     </Card>
                 </CardScroll>
             </Div>
+            <CardGrid>
+                <Card size={"l"} mode={"shadow"}>
+                    <Div>
+                        Цены меняются от множества факторов, таких как:
+                        <br/><br/>
+                        1. Технология StatTrak. Скины с Технологией StatTrak являются самыми дорогыми в своей категории. Данная технология добавляет на скин небольшой счетчик, данный счетчик считает количество всех убийств игрока.
+                        <br/><br/>
+                        Сувенирный ли скин?
+                        - Если да, то цена вероятно будут высокой! Сувенирные скины можно получить просматривая турнир Major
+                    </Div>
+                </Card>
+            </CardGrid>
         </Group>
     </Panel>
 );
