@@ -10,7 +10,7 @@ import {
     Div,
     CardGrid,
     Card,
-    Input
+    Input, Spinner
 } from '@vkontakte/vkui';
 import Icon28ChevronBack from '@vkontakte/icons/dist/28/chevron_back';
 import Icon24Back from '@vkontakte/icons/dist/24/back';
@@ -23,24 +23,40 @@ class APITest extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            total_kills: 0,
-            error: false
+            total_kills: "",
+            error: false,
+            spinner: false,
         };
     }
 
     f = async () => {
         let id = document.getElementById("idInput").value;
-        const res = await fetch("http://localhost:5000/stat/get/" + id);
-        const json = await res.json();
-        if(json.total_kills) {
+        this.setState({
+            spinner: true
+        })
+        // const res = await fetch("http://178.250.158.200:5000/stat/get/" + id).catch(r => console.log(r));
+        const res = await fetch("http://178.250.158.200:5000/test", {
+            method: "GET",
+            headers: {
+                "Content-Security-Policy": "upgrade-insecure-requests"
+            },
+            mode: "same-origin"
+        })
+        console.log(res)
+        // const json = await res.json();
+        // console.log(json);
+        // if(json["hits"]) {
+        //     this.setState({
+        //         error: true,
+        //         spinner: false
+        //     })
+        // } else {
             this.setState({
-                error: true
+                // total_kills: json.total_kills,
+                // error: false,
+                spinner: false
             })
-        } else {
-            this.setState({
-                total_kills: json.total_kills
-            })
-        }
+        // }
     }
 
     render() {
@@ -64,7 +80,9 @@ class APITest extends React.Component {
                 </Div>
                 <CardGrid>
                     <Card size={"l"} mode={"shadow"}>
-                        {!this.state.error && <Div>{this.state.total_kills}</Div>}
+                        {!this.state.error && this.state.total_kills !== "" && <Div>{this.state.total_kills}</Div>}
+                        {this.state.error && <Div>Что-то пошло не так.</Div>}
+                        {this.state.spinner && <Spinner size="large" style={{ marginTop: 20 }} />}
                     </Card>
                 </CardGrid>
             </Panel>
